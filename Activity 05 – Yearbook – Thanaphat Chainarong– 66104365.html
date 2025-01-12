@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity 05 – Yearbook – Thanaphat Chainarong– 66104365</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .outer-frame {
+            position: relative;
+            width: 100%;
+            height: auto;
+            padding: 20px;
+            background: linear-gradient(to right, #fde7fd, #ffddcc);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #ffffff;
+            border-radius: 10px 10px 0 0;
+            padding: 10px 20px;
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%
+        }
+
+        .top-bar .dots {
+            display: flex;
+            gap: 10px;
+        }
+
+        .top-bar .dot {
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: rgb(255, 150, 246);
+        }
+
+        .top-bar .dot:nth-child(2) {
+            background: rgb(255, 122, 65);
+        }
+
+        .top-bar .dot:nth-child(3) {
+            background:rgb(113, 201, 255);
+        }
+        .balloon {
+            width: 60px;
+            height: 80px;
+            background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+            border-radius: 50%;
+            position: absolute;
+            animation: float 6s ease-in-out infinite;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .balloon:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 20px;
+            background: #4f4f4f;
+}
+
+        @keyframes float {
+        0%, 100% {
+        transform: translateY(0) rotate(0deg);
+        }
+        50% {
+        transform: translateY(-20px) rotate(5deg);
+        }
+}
+
+
+    </style>
+</head>
+
+<body class="bg-blue-50 p-10">
+    <body class="bg-rose-50 p-10">
+        <!-- กรอบ Yearbook -->
+        <div class="outer-frame relative">
+            <img src="https://i.ibb.co/FqrmzLh/image-removebg-preview.png" 
+            alt="Rainbow" 
+            class="rainbow-decoration absolute" 
+            style="bottom: 50px; left: 50%; transform: translateX(-50%); width: 200px; opacity: 0.8;">
+
+            <div class="balloon" style="top: 50px; left: 30px; background: linear-gradient(140deg, #f5e210, #a6c1ee);"></div>
+            <div class="balloon" style="top: 100px; right: 50px; background: linear-gradient(135deg, #fbc2eb, #8ab5ff);"></div>
+            <div class="balloon" style="top: 150px; left: 150px; background: linear-gradient(135deg, #ffd1ff , #ff5d30);"></div>
+            <div class="balloon" style="top: 150px; right: 180px; background: linear-gradient(135deg, #76ccf1, #37c6ff);"></div>
+            <div class="balloon" style="top: 300px; left: 100px; background: linear-gradient(135deg, #f8ac55 , #ff5d30);"></div>
+            <div class="balloon" style="top: 300px; right: 120px; background: linear-gradient(135deg, #fff424, #ffbb00);"></div>
+            <div class="balloon" style="top: 700px; left: 100px; background: linear-gradient(135deg, #712fff, #ff0252);"></div>
+            <div class="balloon" style="top: 700px; right: 120px; background: linear-gradient(135deg, #fe7004, #ff0202);"></div>
+            <div class="balloon" style="top: 1000px; left: 100px; background: linear-gradient(135deg, #ffea03 , #e5ff00);"></div>
+            <div class="balloon" style="top: 1000px; right: 120px; background: linear-gradient(135deg, #ff83f5, #ff1ca0);"></div>
+            <div class="balloon" style="top: 1500px; left: 30px; background: linear-gradient(140deg, #f5e210, #a6c1ee);"></div>
+            <div class="balloon" style="top: 1500px; right: 50px; background: linear-gradient(135deg, #fbc2eb, #8ab5ff);"></div>
+            <div class="balloon" style="top: 1600px; left: 150px; background: linear-gradient(135deg, #ffd1ff , #ff5d30);"></div>
+            <div class="balloon" style="top: 1600px; right: 180px; background: linear-gradient(135deg, #76ccf1, #37c6ff);"></div>
+            <div class="balloon" style="top: 2000px; left: 100px; background: linear-gradient(135deg, #f8ac55 , #ff5d30);"></div>
+            <div class="balloon" style="top: 2000px; right: 120px; background: linear-gradient(135deg, #5fff77, #119e26);"></div>
+            <div class="balloon" style="bottom: 1300px; left: 30px; background: linear-gradient(140deg, #f5e210, #a6c1ee);"></div>
+            <div class="balloon" style="bottom: 1300px; right: 50px; background: linear-gradient(135deg, #fbc2eb, #8ab5ff);"></div>
+            <div class="balloon" style="bottom: 1500px; left: 150px; background: linear-gradient(135deg, #ffd1ff , #ff5d30);"></div>
+            <div class="balloon" style="bottom: 1500px; right: 180px; background: linear-gradient(135deg, #76ccf1, #37c6ff);"></div>
+            <div class="balloon" style="bottom : 50px; left: 30px; background: linear-gradient(140deg, #f5e210, #a6c1ee);"></div>
+            <div class="balloon" style="bottom : 100px; right: 50px; background: linear-gradient(135deg, #fbc2eb, #8ab5ff);"></div>
+            <div class="balloon" style="bottom : 150px; left: 150px; background: linear-gradient(135deg, #ffd1ff , #ff5d30);"></div>
+            <div class="balloon" style="bottom : 150px; right: 180px; background: linear-gradient(135deg, #76ccf1, #37c6ff);"></div>
+            <div class="balloon" style="bottom : 300px; left: 100px; background: linear-gradient(135deg, #f8ac55 , #ff5d30);"></div>
+            <div class="balloon" style="bottom : 300px; right: 120px; background: linear-gradient(135deg, #fff424, #ffbb00);"></div>
+            
+            <div class="top-bar">
+                <div class="dots">
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+                <button class="yearbook-button">Yearbook</button>
+            </div>
+    
+    <div class="bg-white-50 p-10">
+    <!-- Header Section -->
+    <header class="w-full sm:w-10/12 lg:w-8/12 mx-auto my-10 rounded-lg shadow-lg text-center flex flex-col justify-center items-center relative overflow-hidden"
+        style="background-image: url('https://i.ibb.co/YyqDB03/DALL-E-2025-01-12-17-42-41-A-vibrant-and-playful-background-for-a-children-s-day-themed-yearbook-hea.webp'); 
+               background-size: cover; 
+               background-position: center; 
+               height: 400px;">
+        <div class="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+        <div class="relative z-10 text-center">
+        <h1 class="text-4xl font-bold text-white mb-2">COEAI - Yearbook 2024</h1>
+        <h3 class="text-2xl font-bold text-white">A collection of memories and moments</h3>
+        </div>
+    </header>
+
+
+
+    
+    <div class="container w-full sm:w-10/12 lg:w-8/12 mx-auto my-10 bg-white shadow-lg rounded-lg overflow-hidden">
+        <div class="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-6 bg-rose-300">
+    
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/4Fh2Tjt/GOLF.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Nawapat Jeenchuay</strong>
+                        <p class="text-gray-600 mt-1">66120890</p>
+                        <p class="text-gray-600 mt-1">Nickname : NongGolf</p>
+                        <p class="text-gray-600 mt-1">Ahh shit , here we go again.</p>
+                        <a href="https://web.facebook.com/ggolf.nawapat" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/nong.gobx/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@nong_gobx" class="text-black-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-tiktok"></i></fa-brands></a>
+                    </div>
+            </div>
+        
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/0JyyLx9/Thanakrit-Pakkothanang.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Thanakrit Pakkothanang</strong>
+                        <p class="text-gray-600 mt-1">66104241</p>
+                        <p class="text-gray-600 mt-1">Nickname : Act</p>
+                        <p class="text-gray-600 mt-1">Siuuuuuuuuu.</p>
+                        <a href="https://web.facebook.com/Thanakritpakkothanang/" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/Thanakrxt_/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/fN0dNJC/Ta.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Thanaphat Chainarong</strong>
+                        <p class="text-gray-600 mt-1">66104365</p>
+                        <p class="text-gray-600 mt-1">Nickname : Ta</p>
+                        <p class="text-gray-600 mt-1">Anything is possible </p>
+                        <a href="https://web.facebook.com/thanaphat.chainarong.50/" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/ta_.thana/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/PYMjHfx/Pongpipat.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Pongpipat Muangdung</strong>
+                        <p class="text-gray-600 mt-1">66107251</p>
+                        <p class="text-gray-600 mt-1">Nickname : Oak</p>
+                        <p class="text-gray-600 mt-1">ไม่ได้เบียว แค่เป็นหนึ่งเดียวกับ Messi </p>
+                        <a href="https://web.facebook.com/pongpipat.muangdung" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/oak_pongpipat/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/styWtvv/First.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Naikamon Sangkaew</strong>
+                        <p class="text-gray-600 mt-1">66105685</p>
+                        <p class="text-gray-600 mt-1">Nickname : First</p>
+                        <p class="text-gray-600 mt-1">Make Some Pill </p>
+                        <a href="https://web.facebook.com/pegasus9m" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/onebullet._/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/ftxLwB7/Ahmad-aduwa-Da-oh.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Ahmad-aduwa Da-oh</strong>
+                        <p class="text-gray-600 mt-1">66113424</p>
+                        <p class="text-gray-600 mt-1">Nickname : Wa</p>
+                        <p class="text-gray-600 mt-1">My Problem Is my homework </p>
+                        <a href="https://web.facebook.com/amadaduwa.daoh.1" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/pae_adwaa/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/Fsk5PrC/woraphat.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">woraphat hwancham</strong>
+                        <p class="text-gray-600 mt-1">66118613</p>
+                        <p class="text-gray-600 mt-1">Nickname :Jab</p>
+                        <p class="text-gray-600 mt-1">โตขึ้นอยากเป็นเศรษฐี  แต่พอรู้จักหมี เศรษฐีก็ไม่ได้เป็นอีกเลย </p>
+                        <a href="https://www.facebook.com/profile.php?id=100028402636307&_rdc=1&_rdr#" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/jobjab_ww/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/xJV4Kc2/Kun.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Kittisak Manee mangkang</strong>
+                        <p class="text-gray-600 mt-1">66130238</p>
+                        <p class="text-gray-600 mt-1">Nickname :Kun</p>
+                        <p class="text-gray-600 mt-1">Look back, don't look back.</p>
+                        <a href="https://www.facebook.com/kittisak.maneemangkang" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/lalala.kkm/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/RgvM0jk/Nattapong.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Nattapong Rungratchot</strong>
+                        <p class="text-gray-600 mt-1">66117938</p>
+                        <p class="text-gray-600 mt-1">Nickname :Benz</p>
+                        <p class="text-gray-600 mt-1">Think carefully before taking action </p>
+                        <a href="https://www.facebook.com/nathth.phngs.rung.ratn.choti" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/bexz.rc/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/h8Y9mtt/66108853-Panarin-Jengsiri.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Panarin Jengsiri</strong>
+                        <p class="text-gray-600 mt-1">66108853</p>
+                        <p class="text-gray-600 mt-1">Nickname :Ping</p>
+                        <p class="text-gray-600 mt-1">No dedication No Achievement  </p>
+                        <a href="https://www.facebook.com/profile.php?id=100027126890285" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/7.userpxnrin/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/cyRDx8D/thakchinan.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Thakchinan  Paksong</strong>
+                        <p class="text-gray-600 mt-1">66124009</p>
+                        <p class="text-gray-600 mt-1">Nickname :Kim</p>
+                        <p class="text-gray-600 mt-1">Good </p>
+                        <a href="https://web.facebook.com/Takchinan" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/kimtachina_/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/Y8g02zD/BEAM.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Rapeephat Kaoian</strong>
+                        <p class="text-gray-600 mt-1">66129438</p>
+                        <p class="text-gray-600 mt-1">Nickname :Beam</p>
+                        <p class="text-gray-600 mt-1">มหาลัยอันดับต้น ถนนอันดับ....????? 999</p>
+                        <a href="https://www.facebook.com/profile.php?id=100023796870376" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/_beamrapeephat/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/W3N0v28/charmil-AL.png" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Charmil alee</strong>
+                        <p class="text-gray-600 mt-1">66123217</p>
+                        <p class="text-gray-600 mt-1">Nickname :Mil</p>
+                        <p class="text-gray-600 mt-1">"fi dunya wal akhirah"</p>
+                        <a href="https://www.facebook.com/charmil.alee.2024" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/p/CYcEcURvOCM/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/hdCVjFG/Chutipon-Central.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Chutipon Promdee</strong>
+                        <p class="text-gray-600 mt-1">66114315</p>
+                        <p class="text-gray-600 mt-1">Nickname :Central</p>
+                        <p class="text-gray-600 mt-1">"Why!! Why!! Why you read this. do you know you lost your time."</p>
+                        <a href="https://www.facebook.com/central.tone" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/_centralllxlll/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/wwgH9bp/Narasak.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Narasak Thongphijit</strong>
+                        <p class="text-gray-600 mt-1">66123365</p>
+                        <p class="text-gray-600 mt-1">Nickname : Poom</p>
+                        <p class="text-gray-600 mt-1">"Live today as if it were your last."</p>
+                        <a href="https://www.facebook.com/narasak.thongphijit.9" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/nrsk_1/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/h7YhC59/James.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Veerapat Phumitorn</strong>
+                        <p class="text-gray-600 mt-1">66110669</p>
+                        <p class="text-gray-600 mt-1">Nickname : James</p>
+                        <p class="text-gray-600 mt-1">"THC Full Time"</p>
+                        <a href="https://www.facebook.com/veerapat.phoomitorn" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/j.james_zz8/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/VYWPPrd/Natdanai.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Natdanai Yongsatar</strong>
+                        <p class="text-gray-600 mt-1">66125923</p>
+                        <p class="text-gray-600 mt-1">Nickname : Nai</p>
+                        <p class="text-gray-600 mt-1">"saw thum"</p>
+                        <a href="https://www.facebook.com/natdanai.yongsatar" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/natdanai_yst/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/tqgPKvq/Jom.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Khajohn Muenbal</strong>
+                        <p class="text-gray-600 mt-1">66101072</p>
+                        <p class="text-gray-600 mt-1">Nickname : Jom</p>
+                        <p class="text-gray-600 mt-1">"Life is like a door, never trust a cow because the sun can't swim"</p>
+                        <a href="https://www.facebook.com/khajohn.muenbal.2024" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/jxm.m_/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/VSx19Sx/Sil.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Basil Ben-Alee</strong>
+                        <p class="text-gray-600 mt-1">66127275</p>
+                        <p class="text-gray-600 mt-1">Nickname : Sil</p>
+                        <p class="text-gray-600 mt-1">"If you love risking, go to........ALPHA888!!!"</p>
+                        <a href="https://www.facebook.com/profile.php?id=100081312680506" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/sil.mufc/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/ws3kzts/Teerapat-Bunchuai.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Teerapat Bunchuai</strong>
+                        <p class="text-gray-600 mt-1">66124934</p>
+                        <p class="text-gray-600 mt-1">Nickname : Dook</p>
+                        <p class="text-gray-600 mt-1">"OMG !! ! !! ! !! ! !!"</p>
+                        <a href="https://www.facebook.com/thir.phathr.buychwy.2024" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/zet_zero_0/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/Ldtdxsg/Pisit-Rodkleang.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Pisit Rodkleang</strong>
+                        <p class="text-gray-600 mt-1">66108168</p>
+                        <p class="text-gray-600 mt-1">Nickname : Seen</p>
+                        <p class="text-gray-600 mt-1">"Living life is the riskiest gamble!!!"</p>
+                        <a href="https://www.facebook.com/pisit.rodkleang.2024" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/star_.dust1/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/TWRJpJX/66121708-pongsathorn.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Pongsathorn Mutchimapiro</strong>
+                        <p class="text-gray-600 mt-1">66121708</p>
+                        <p class="text-gray-600 mt-1">Nickname : Bank</p>
+                        <p class="text-gray-600 mt-1">"หมากรุกจะเดินยังต้องคิด หมากชีวิตจะเดินโดยไม่คิดได้ไงbro"</p>
+                        <a href="https://www.facebook.com/bank3612" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/bank_pongsathorn/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+             <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/jGGTCp5/Niti-Singchao.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Niti Singchao</strong>
+                        <p class="text-gray-600 mt-1">66105834</p>
+                        <p class="text-gray-600 mt-1">Nickname : Copter</p>
+                        <p class="text-gray-600 mt-1">"OMG !! ! !! ! !! ! !!"</p>
+                        <a href="https://www.facebook.com/niti.singchao.7" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/niti_.s/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/4f3JVbf/Boss.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Siriwit Fueakhong</strong>
+                        <p class="text-gray-600 mt-1">66111741</p>
+                        <p class="text-gray-600 mt-1">Nickname : Boss</p>
+                        <p class="text-gray-600 mt-1">"U are MyFirstKiss"</p>
+                        <a href="https://www.facebook.com/profile.php?id=100007958987274&_rdc=1&_rdr#" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/_._myfirstkiss/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+                    
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/cQH0Vms/66133950-Parintorn.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Parintorn Kongphol</strong>
+                        <p class="text-gray-600 mt-1">66133950</p>
+                        <p class="text-gray-600 mt-1">Nickname : Jean</p>
+                        <p class="text-gray-600 mt-1">"After Tuesday even the calender go WT...."</p>
+                        <a href="https://web.facebook.com/jean.ny.174528" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/jean_nyl/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/JRCMSd5/Ausanisa-Nice.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Ausanisa Pankaew</strong>
+                        <p class="text-gray-600 mt-1">66120155</p>
+                        <p class="text-gray-600 mt-1">Nickname : Nice!!!!</p>
+                        <p class="text-gray-600 mt-1">"Victory is your own future."</p>
+                        <a href="https://web.facebook.com/n21a50" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/n._.ice2me1t5y0u/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/1Q0NgNn/Peeniti-Pikunngam.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Peeniti Pikunngam</strong>
+                        <p class="text-gray-600 mt-1">66132226</p>
+                        <p class="text-gray-600 mt-1">Nickname : Seian</p>
+                        <p class="text-gray-600 mt-1">"Good sleep Good life"</p>
+                        <a href="https://web.facebook.com/profile.php?id=100009468810728" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/se_anx/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+
+            <div class="bg-white shadow-md rounded-lg p-5 flex items-center transition-transform transform hover:scale-105">
+                <img src="https://i.ibb.co/FYYshLt/baom-apinan.jpg" alt="Image 1" class="rounded-full w-24 h-24 mr-4">
+                    <div>
+                        <strong class="font-bold text-xl">Apinan Aryuyong</strong>
+                        <p class="text-gray-600 mt-1">66112772</p>
+                        <p class="text-gray-600 mt-1">Nickname : BEAM</p>
+                        <p class="text-gray-600 mt-1">"Shared Beauty, Shared Joy"</p>
+                        <a href="https://web.facebook.com/apinan.aryuyong" class="text-sky-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-facebook"></i></a>
+                        <a href="https://www.instagram.com/beam.in.motion/" class="text-pink-700 mt-2 inline-block hover:underline"><i
+                                    class="fa-brands fa-square-instagram"></i></a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="bg-blue-200 text-center py-3 w-full" style="border-radius: 0 0 20px 20px;">
+    <p class="text-gray-700">© 2024 COE-AI Yearbook | All rights reserved</p>
+</footer>
+
+</body>
+
+</html>
